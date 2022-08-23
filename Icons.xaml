@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- <a href="https://www.flaticon.com/free-icons/new" title="new icons">New icons created by Freepik - Flaticon</a> -->
+    <Image x:Key="IconNew"
+           Source="icons/new-document.png"/>
+
+    <!-- <a href="https://www.flaticon.com/free-icons/paper" title="paper icons">Paper icons created by Gregor Cresnar - Flaticon</a> -->
+    <Image x:Key="IconCopy"
+           Source="icons/copy.png"/>
+</ResourceDictionary>
+

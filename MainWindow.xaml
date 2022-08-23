@@ -8,7 +8,12 @@
         WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
-        <ResourceDictionary Source="Styles.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+                <ResourceDictionary Source="Icons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
 
     <DockPanel LastChildFill="True">
@@ -40,9 +45,9 @@
         <!-- TOOLBAR -->
         <StackPanel DockPanel.Dock="Top"
                     Orientation="Horizontal">
-            <Button Content="B"
-                    Style="{StaticResource StyleButtonToolBar}" />
-            <Button Content="B"
+            <Button Content="{StaticResource IconNew}"
+                    Style="{StaticResource StyleButtonToolBar}"/>
+            <Button Content="{StaticResource IconCopy}"
                     Style="{StaticResource StyleButtonToolBar}" />
             <Button Content="B"
                     Style="{StaticResource StyleButtonToolBar}" />
