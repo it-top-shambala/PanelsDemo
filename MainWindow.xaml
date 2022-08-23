@@ -4,101 +4,110 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="950">
+        Title="PanelsDemo" Height="450" Width="950"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </Window.Resources>
 
     <DockPanel LastChildFill="True">
         <!-- MENU -->
-        <Menu DockPanel.Dock="Top">
+        <Menu DockPanel.Dock="Top" Style="{StaticResource StyleDefault}">
             <MenuItem Header="_File">
-                <MenuItem Header="New..."/>
-                <MenuItem Header="Open..."/>
-                <Separator/>
-                <MenuItem Header="Save"/>
-                <MenuItem Header="Save as..."/>
+                <MenuItem Header="New..." />
+                <MenuItem Header="Open..." />
+                <Separator />
+                <MenuItem Header="Save" />
+                <MenuItem Header="Save as..." />
             </MenuItem>
 
             <MenuItem Header="_Edit">
-                <MenuItem Header="Copy"/>
-                <MenuItem Header="Paste"/>
-                <MenuItem Header="Cut"/>
-                <MenuItem Header="Delete"/>
-                <Separator/>
+                <MenuItem Header="Copy" />
+                <MenuItem Header="Paste" />
+                <MenuItem Header="Cut" />
+                <MenuItem Header="Delete" />
+                <Separator />
                 <MenuItem Header="Find">
-                    <MenuItem Header="Find..."/>
-                    <MenuItem Header="Replace..."/>
+                    <MenuItem Header="Find..." />
+                    <MenuItem Header="Replace..." />
                 </MenuItem>
             </MenuItem>
 
-            <MenuItem Header="_About..."/>
+            <MenuItem Header="_About..." />
         </Menu>
 
         <!-- TOOLBAR -->
         <StackPanel DockPanel.Dock="Top"
                     Orientation="Horizontal">
-            <Button Content="B" Height="32" Width="32"/>
-            <Button Content="B" Height="32" Width="32"/>
-            <Button Content="B" Height="32" Width="32"/>
-            <Button Content="B" Height="32" Width="32"/>
-            <Button Content="B" Height="32" Width="32"/>
+            <Button Content="B"
+                    Style="{StaticResource StyleButtonToolBar}" />
+            <Button Content="B"
+                    Style="{StaticResource StyleButtonToolBar}" />
+            <Button Content="B"
+                    Style="{StaticResource StyleButtonToolBar}" />
+            <Button Content="B"
+                    Style="{StaticResource StyleButtonToolBar}" />
+            <Button Content="B"
+                    Style="{StaticResource StyleButtonToolBar}" />
         </StackPanel>
 
         <!-- STATUS BAR -->
         <StatusBar DockPanel.Dock="Bottom">
-            <TextBlock Text="Status ..."/>
+            <TextBlock Text="Status ..." />
         </StatusBar>
 
         <!-- LEFT PANEL -->
         <StackPanel DockPanel.Dock="Left"
-                    Orientation="Vertical"
-                    Width="150"
-                    Background="LightGray">
-            <TextBlock Text="Left panel"/>
+                    Style="{StaticResource StyleLeftPanel}">
+            <TextBlock Text="Left panel" />
         </StackPanel>
 
         <!-- RIGHT PANEL -->
         <StackPanel DockPanel.Dock="Right"
-                    Orientation="Vertical"
-                    Width="150"
-                    Background="LightGray">
-            <TextBlock Text="Right panel"/>
+                    Style="{StaticResource StyleRightPanel}">
+            <TextBlock Text="Right panel" />
         </StackPanel>
 
         <!-- MAIN -->
         <Grid Background="Gray">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0"
-                       Text="HEADER"/>
+                       Text="HEADER" />
 
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2.5*" />
                 </Grid.ColumnDefinitions>
 
-                <ListBox Grid.Column="0"/>
+                <ListBox Grid.Column="0" />
 
                 <StackPanel Grid.Column="1"
                             Orientation="Vertical">
                     <!-- INPUT FIRST NAME -->
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="First name" Width="100"/>
-                        <TextBox Width="300"/>
+                        <Label Content="First name"
+                               Style="{StaticResource StyleInputLabel}" />
+                        <TextBox Style="{StaticResource StyleInput}" />
                     </StackPanel>
 
                     <!-- INPUT LAST NAME -->
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Last name" Width="100"/>
-                        <TextBox Width="300"/>
+                        <Label Content="Last name"
+                               Style="{StaticResource StyleInputLabel}" />
+                        <TextBox Style="{StaticResource StyleInput}" />
                     </StackPanel>
 
                     <!-- INPUT AGE -->
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Age" Width="100"/>
-                        <TextBox Width="300"/>
+                        <Label Content="Age"
+                               Style="{StaticResource StyleInputLabel}" />
+                        <TextBox Style="{StaticResource StyleInput}" />
                     </StackPanel>
                 </StackPanel>
             </Grid>
